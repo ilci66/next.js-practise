@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from '../comps/navbar'
+import Footer from '../comps/footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <h1>Homepage</h1>
       <p>Next.js pre renders and sends to browser</p>
       <p>Duis sunt nulla Lorem et nulla sit dolor sunt aliqua eiusmod sit magna labore in. Mollit in incididunt id id 
@@ -13,6 +16,7 @@ export default function Home() {
       esse deserunt cillum amet culpa nisi magna deserunt. Fugiat id esse velit amet duis consectetur in mollit 
       occaecat laboris magna. Duis eiusmod laborum ad excepteur cillum sit culpa sunt in aliquip occaecat Lorem 
       ullamco.</p>
+      <Footer />
     </div>
   )
 }
