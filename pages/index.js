@@ -8,7 +8,6 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <h1>Homepage</h1>
       <p>Next.js pre renders and sends to browser</p>
       <p>Duis sunt nulla Lorem et nulla sit dolor sunt aliqua eiusmod sit magna labore in. Mollit in incididunt id id 
@@ -20,7 +19,6 @@ export default function Home() {
       <Link href="/test/testing">
         <a>Link for testing route</a>
       </Link>
-      <Footer />
     </div>
   )
 }
