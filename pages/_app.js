@@ -4,7 +4,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
     return (
       <Layout>
-        // this becomes the children in the layout component
+        {/* this becomes the children in the layout component */}
         <Component {...pageProps} />
       </Layout>
     )
