@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Navbar from '../comps/navbar'
 import Footer from '../comps/footer'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       esse deserunt cillum amet culpa nisi magna deserunt. Fugiat id esse velit amet duis consectetur in mollit 
       occaecat laboris magna. Duis eiusmod laborum ad excepteur cillum sit culpa sunt in aliquip occaecat Lorem 
       ullamco.</p>
+      <Link href="/test/testing">
+        <a>Link for testing route</a>
+      </Link>
       <Footer />
     </div>
   )
