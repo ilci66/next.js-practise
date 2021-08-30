@@ -8,10 +8,12 @@ const notFound = () => {
     
     useEffect(() => {
         setTimeout(() => {
+            // like useHistory hook from react-router-dom library, history.push()
             router.push('/')
             // or I could use this:
             // router.go(1)
             // but you don't know where they came from
+            
         }, 5000)
     }, [])
 
