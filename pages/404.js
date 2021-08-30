@@ -1,7 +1,20 @@
 //this page will be served instead of typical 404 page
 import Link from 'next/link'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const notFound = () => {
+    const router = useRouter();
+    
+    useEffect(() => {
+        setTimeout(() => {
+            router.push('/')
+            // or I could use this:
+            // router.go(1)
+            // but you don't know where they came from
+        }, 5000)
+    }, [])
+
     return (
         <div className="not-found">
             <h1>Nope!</h1>
