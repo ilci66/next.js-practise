@@ -17,7 +17,7 @@ export default function Home() {
       occaecat laboris magna. Duis eiusmod laborum ad excepteur cillum sit culpa sunt in aliquip occaecat Lorem 
       ullamco.</p>
       <Link href="/test/testing">
-        <a>Link for testing route</a>
+        <a className={styles.btn}>Link for testing route</a>
       </Link>
     </div>
   )
