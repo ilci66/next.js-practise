@@ -4,7 +4,7 @@ export const getStaticPaths = async () => {
 
     const paths = data.map(user => {
         return{
-            params: { id: ninja.id.toString() }
+            params: { id: user.id.toString() }
         }
     })
 
@@ -15,10 +15,23 @@ export const getStaticPaths = async () => {
     }
 }
 
+// this runs ten times because there are ten ids, and in build 
+// builds ten pages with javascript bundles
+export const getStaticProps = async (context) => {
+    const id = context.params.id
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+    const data = await res.json();
 
-const Detailed = () => {
+    return {
+        // this is used in the component down below
+        props: { user: data}
+    }
+}
+
+
+const Detailed = ({ user }) => {
     return (
-        <div>A more detailed look on the user</div>
+        <div>Username {user.name}</div>
     )
 }
 
